@@ -16,6 +16,8 @@ class Livro implements Publicacao
     $this->titulo = $ti;
     $this->autor = $au;
     $this->totPaginas = $tp;
+    $this->aberto = false;
+    $this->pagAtual = 0;
     $this->leitor = $le;
   }
 
