@@ -24,6 +24,9 @@ class Livro implements Publicacao
   // Métodos Publicos
   public function detalhes()
   {
+    echo '<p>Livro ' . $this->titulo . 'escrito por ' . $this->autor . '<p/>';
+    echo '<p>Páginas :' . $this->totPaginas;
+    echo '<br> Sendo lido por ' . $this->leitor;
   }
   public function abrir()
   {
