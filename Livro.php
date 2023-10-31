@@ -25,18 +25,27 @@ class Livro implements Publicacao
   }
   public function abrir()
   {
+    $this->aberto = true;
   }
   public function fechar()
   {
+    $this->aberto = false;
   }
   public function folhear($p)
   {
+    if ($p > $this->totPaginas) {
+      $this->pagAtual = 0;
+    } else {
+      $this->pagAtual = $p;
+    }
   }
   public function avancarPag()
   {
+    $this->pagAtual++;
   }
   public function voltarPag()
   {
+    $this->pagAtual--;
   }
 
   // Métodos Getters
@@ -72,7 +81,7 @@ class Livro implements Publicacao
   }
   function setAutor($au)
   {
-    $this->atuor = $au;
+    $this->autor = $au;
   }
   function setTotPaginas($tp)
   {
