@@ -17,10 +17,16 @@
     $p[1] = new Pessoa('Bulma', 15, 'feminino');
 
     $l[0] = new Livro('Protocolo Bluehand', 'Jovem Nerd', 120, $p[0]);
-    $l[1] = new Livro('PHPBásico', 'José da Silva', 400, $p[0]);
+    $l[1] = new Livro('PHPBásico', 'José da Silva', 400, $p[1]);
     $l[2] = new Livro('Hogwarts:Uma História', 'Batilda Bagshot', 600, $p[1]);
 
-    print_r($l[0]);
+    $l[0]->abrir();
+    $l[0]->folhear(56);
+    $l[0]->voltarPag();
+    $l[0]->detalhes();
+
+    $l[1]->detalhes();
+
 
 
     ?>
